@@ -20,7 +20,3 @@ if myInput >0 and myInput <100 :
           print ("3.Invalid")
 else:
   print("Allowed number of credit card range is 0 > N < 100")
-
-Please use the below link to run the above phython code for output:
-
-https://repl.it/repls/ElasticMiserlyQuerylanguage
