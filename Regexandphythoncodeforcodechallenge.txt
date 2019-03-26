@@ -1,0 +1,19 @@
+import re
+num_input=input("Enter number of credit cards to validate :")
+myInput = int(num_input)
+for x in range(0, myInput):
+    creditcard_no=input("Enter credit card number :") 
+    matchObj = re.match(r'\b(?:[456][0-9]{3}([-]{0,1})[0-9]{4}([-]{0,1})[0-9]{4}([-]{0,1})[0-9]{4})\b', creditcard_no)
+    if matchObj:
+        creditcard_no_seq=creditcard_no.replace("-", "")
+        seq_match=re.findall(r'((.)\2{3,})', creditcard_no_seq)
+        if seq_match:
+          print ("1.Invalid")
+        else:
+          print ("2.Valid: ", matchObj.group())
+    else:
+        print ("3.Invalid")
+
+Please use the below link to run the above phython code for output:
+
+https://repl.it/repls/ElasticMiserlyQuerylanguage
